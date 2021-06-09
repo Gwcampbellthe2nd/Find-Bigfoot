@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+<head>
+    <link rel="stylesheet" href="style.css"
   </head>
-  <body>
-    <img src="bigfoot.png">
-    <script src="script.js"></script>
+  <body onload="loadBigFoot()">
+   
+
+    <script>
+    function moveBigFoot() {
+        alert('Woohoo, you win! You found Bigfoot!')
+        var picture = document.getElementById('bigFoot')
+
+        var x = Math.random()*100;
+        var y = Math.random()*100;
+        
+        picture.style.top = x + '%';
+        picture.style.left = y + '%';
+        }
+
+        function loadBigFoot() {
+  document.getElementById('bigFoot').src = '/bigfoot.png'
+}
+ </script>
+   
+    <img src="bigfoot.png" id="bigFoot" onclick = "moveBigFoot()"; />
+    
   </body>
 </html>
