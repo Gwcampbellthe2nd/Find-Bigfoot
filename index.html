@@ -1,11 +1,12 @@
 <head>
-    <link rel="stylesheet" href="style.css"
-  </head>
-  <body onload="loadBigFoot()">
-   
+	<link rel="stylesheet" href="style.css" </head>
 
-    <script>
-    function moveBigFoot() {
+	<body>
+		<div class="gameBoard" onload="loadBigFoot()">
+
+
+			<script>
+				function moveBigFoot() {
         alert('Woohoo, you win! You found Bigfoot!')
         var picture = document.getElementById('bigFoot')
 
@@ -19,9 +20,12 @@
         function loadBigFoot() {
   document.getElementById('bigFoot').src = '/bigfoot.png'
 }
- </script>
-   
-    <img src="bigfoot.png" id="bigFoot" onclick = "moveBigFoot()"; />
+			</script>
+
+			<img src="bigfoot.png" id="bigFoot" onclick = "moveBigFoot()"; />
     
+  </div>
+  <div class="controls">
+  </div>
   </body>
 </html>
