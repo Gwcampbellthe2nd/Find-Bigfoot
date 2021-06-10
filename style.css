@@ -6,12 +6,13 @@ div.gameBoard {
   
 div.controls {
   background-color:white;
-  height:5vh;
+  height:10vh;
   width:80%;
   bottom:0px;
   left:10%;
   right:10%;
   position: absolute;
+  border-radius: 1em 1em 0 0;
 }
 
 body {
