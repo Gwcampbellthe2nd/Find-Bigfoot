@@ -19,13 +19,25 @@
 
         function loadBigFoot() {
   document.getElementById('bigFoot').src = '/bigfoot.png'
+        }
+  function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
+  function changeOpacity(val) {
+    var element = document.getElementById("bigFoot");
+    element.style.opacity = ((100 - document.getElementById('textInput').value) / 100) + .05;
+    element.style.height = ((100 - document.getElementById('textInput').value) / 2) + 5 + "px";
+    element.style.width = ((100 - document.getElementById('textInput').value) / 2) + 5 + "px";
 }
+
 			</script>
 
 			<img src="bigfoot.png" id="bigFoot" onclick = "moveBigFoot()"; />
     
   </div>
   <div class="controls">
+    <label>Difficuly</label>
+    <input id="textInput" type="range" name="rangeInput" value="0" min="0" max="100" onchange="changeOpacity(this.value);"> 
   </div>
   </body>
 </html>
